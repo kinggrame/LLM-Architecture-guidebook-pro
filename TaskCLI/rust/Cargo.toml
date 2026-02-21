@@ -1,0 +1,20 @@
+[package]
+name = "taskcli"
+version = "0.1.0"
+edition = "2021"
+description = "A command-line task management tool"
+
+[dependencies]
+clap = { version = "4.0", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["v4"] }
+anyhow = "1.0"
+
+[dev-dependencies]
+tempfile = "3.3"
+
+[[bin]]
+name = "taskcli"
+path = "src/main.rs"

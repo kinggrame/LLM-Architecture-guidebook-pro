@@ -1,0 +1,33 @@
+[package]
+name = "llm_engine"
+version = "0.2.0"
+edition = "2021"
+description = "High-performance LLM inference engine in Rust"
+
+[dependencies]
+ndarray = "0.15"
+rand = "0.8"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+thiserror = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+rayon = "1.7"
+parking_lot = "0.12"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+bytemuck = "1.14"
+clap = { version = "4.0", features = ["derive"] }
+
+[lib]
+name = "llm_engine"
+path = "src/lib.rs"
+
+[[bin]]
+name = "llm_engine"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

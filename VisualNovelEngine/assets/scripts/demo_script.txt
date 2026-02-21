@@ -1,0 +1,61 @@
+# Visual Novel Demo Script
+# Lines starting with # are comments
+
+# Start with background
+@bg classroom.jpg
+
+# Play background music
+@music bgm_main.ogg
+
+# Character introduction
+小林: 早上好！今天是个美好的一天呢。
+小林: 欢迎来到这个视觉小说引擎演示。
+
+# Change background with fade transition
+@bg hallway.jpg
+
+小林: 这里是走廊，我们可以在这里遇到其他角色。
+
+# Character appears
+@char heroine happy.png center
+
+小林: 啊，是小美！
+
+小美: 你好，小林！听说你最近在开发游戏引擎？
+
+小林: 是的！这是一个专门为视觉小说设计的引擎。
+
+小美: 哇，听起来很棒！可以给我看看吗？
+
+# Choice point
+[What will you do?]
+1. 当然可以！ -> show_demo
+2. 现在还不行 -> not_ready
+
+*show_demo
+
+小林: 当然可以！让我给你展示一下。
+
+小美: 太好了！我很期待。
+
+@jump end
+
+*not_ready
+
+小林: 现在还不行，还需要一些时间完善。
+
+小美: 这样啊...那我等你好消息！
+
+*end
+
+小林: 无论如何，谢谢你的支持！
+
+小美: 加油哦！
+
+# Fade to black
+@bg black.jpg
+
+@music fade_out
+
+# End of demo
+@end

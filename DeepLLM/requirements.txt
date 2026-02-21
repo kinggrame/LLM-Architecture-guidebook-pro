@@ -1,0 +1,12 @@
+# DeepLLM - 深度学习训练框架
+# 从零实现大模型训练，与 LLMEngine 形成闭环
+
+torch>=2.0.0
+numpy>=1.24.0
+transformers>=4.30.0
+datasets>=2.12.0
+accelerate>=0.20.0
+tensorboard>=2.12.0
+tqdm>=4.65.0
+scikit-learn>=1.2.0
+matplotlib>=3.7.0
