@@ -1,0 +1,1 @@
+ai生成的项目学习资源，针对rust和llm相关引擎以及deep learnning
