@@ -19,7 +19,6 @@ pub use loader::{LoadResult, ModelLoader};
 pub use model::{Model, ModelConfig, ModelType};
 pub use quantization::QuantizationType;
 
-use std::sync::Arc;
 use thiserror::Error;
 
 #[derive(Error, Debug)]

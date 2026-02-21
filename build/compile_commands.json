@@ -1,0 +1,26 @@
+[
+{
+  "directory": "D:/项目学习/引擎学习/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/taskcli.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\taskcli.dir\\src\\main.cpp.obj -c D:\\项目学习\\引擎学习\\TaskCLI\\cpp\\src\\main.cpp",
+  "file": "D:/项目学习/引擎学习/TaskCLI/cpp/src/main.cpp",
+  "output": "CMakeFiles/taskcli.dir/src/main.cpp.obj"
+},
+{
+  "directory": "D:/项目学习/引擎学习/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/taskcli.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\taskcli.dir\\src\\model\\task.cpp.obj -c D:\\项目学习\\引擎学习\\TaskCLI\\cpp\\src\\model\\task.cpp",
+  "file": "D:/项目学习/引擎学习/TaskCLI/cpp/src/model/task.cpp",
+  "output": "CMakeFiles/taskcli.dir/src/model/task.cpp.obj"
+},
+{
+  "directory": "D:/项目学习/引擎学习/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/taskcli.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\taskcli.dir\\src\\model\\user.cpp.obj -c D:\\项目学习\\引擎学习\\TaskCLI\\cpp\\src\\model\\user.cpp",
+  "file": "D:/项目学习/引擎学习/TaskCLI/cpp/src/model/user.cpp",
+  "output": "CMakeFiles/taskcli.dir/src/model/user.cpp.obj"
+},
+{
+  "directory": "D:/项目学习/引擎学习/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/taskcli.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\taskcli.dir\\src\\storage\\json_store.cpp.obj -c D:\\项目学习\\引擎学习\\TaskCLI\\cpp\\src\\storage\\json_store.cpp",
+  "file": "D:/项目学习/引擎学习/TaskCLI/cpp/src/storage/json_store.cpp",
+  "output": "CMakeFiles/taskcli.dir/src/storage/json_store.cpp.obj"
+}
+]

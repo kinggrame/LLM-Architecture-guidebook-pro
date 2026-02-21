@@ -6,8 +6,7 @@
 //! - GPTQ
 //! - AWQ
 
-use ndarray::{Array2, Array3};
-use std::collections::HashMap;
+use ndarray::Array2;
 
 /// 量化类型
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

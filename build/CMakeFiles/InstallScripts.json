@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/\u9879\u76ee\u5b66\u4e60/\u5f15\u64ce\u5b66\u4e60/build/cmake_install.cmake",
+		"D:/\u9879\u76ee\u5b66\u4e60/\u5f15\u64ce\u5b66\u4e60/build/_deps/nlohmann_json-build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

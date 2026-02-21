@@ -20,10 +20,9 @@
 use crate::model::{LayerWeights, ModelConfig, ModelType, ModelWeights, RoPE};
 use crate::quantization::QuantizationType;
 use crate::{LLMError, Result};
-use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::fs::File;
-use std::io::{BufReader, Read, Seek, SeekFrom};
+use std::io::{BufReader, Read};
 use std::path::Path;
 
 /// 加载结果
@@ -45,6 +44,7 @@ pub struct ModelLoader {
     /// 模型路径
     path: String,
     /// 模型类型
+    #[allow(dead_code)]
     model_type: ModelType,
     /// 量化类型
     quantization: QuantizationType,
@@ -177,8 +177,8 @@ impl ModelLoader {
     /// 加载 GGUF KV tensors
     fn load_gguf_kv<R: Read>(
         &self,
-        reader: &mut R,
-        params: &mut HashMap<String, usize>,
+        _reader: &mut R,
+        _params: &mut HashMap<String, usize>,
     ) -> Result<()> {
         // GGUF 格式的 KV tensor 读取
         // 这里简化处理，实际需要完整的 GGUF 规范实现
@@ -229,7 +229,7 @@ impl ModelLoader {
     ) -> Result<LayerWeights> {
         let head_dim = config.head_dim;
         let hidden_dim = config.embedding_dim;
-        let num_heads = config.num_heads;
+        let _num_heads = config.num_heads;
         let num_kv_heads = config.num_kv_heads;
 
         // 读取 Q、K、V 投影

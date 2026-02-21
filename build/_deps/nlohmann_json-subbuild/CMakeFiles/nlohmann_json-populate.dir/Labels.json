@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/\u9879\u76ee\u5b66\u4e60/\u5f15\u64ce\u5b66\u4e60/build/_deps/nlohmann_json-subbuild/CMakeFiles/nlohmann_json-populate"
+		},
+		{
+			"file" : "D:/\u9879\u76ee\u5b66\u4e60/\u5f15\u64ce\u5b66\u4e60/build/_deps/nlohmann_json-subbuild/CMakeFiles/nlohmann_json-populate.rule"
+		},
+		{
+			"file" : "D:/\u9879\u76ee\u5b66\u4e60/\u5f15\u64ce\u5b66\u4e60/build/_deps/nlohmann_json-subbuild/CMakeFiles/nlohmann_json-populate-complete.rule"
+		},
+		{
+			"file" : "D:/\u9879\u76ee\u5b66\u4e60/\u5f15\u64ce\u5b66\u4e60/build/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-build.rule"
+		},
+		{
+			"file" : "D:/\u9879\u76ee\u5b66\u4e60/\u5f15\u64ce\u5b66\u4e60/build/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-configure.rule"
+		},
+		{
+			"file" : "D:/\u9879\u76ee\u5b66\u4e60/\u5f15\u64ce\u5b66\u4e60/build/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-download.rule"
+		},
+		{
+			"file" : "D:/\u9879\u76ee\u5b66\u4e60/\u5f15\u64ce\u5b66\u4e60/build/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-install.rule"
+		},
+		{
+			"file" : "D:/\u9879\u76ee\u5b66\u4e60/\u5f15\u64ce\u5b66\u4e60/build/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-mkdir.rule"
+		},
+		{
+			"file" : "D:/\u9879\u76ee\u5b66\u4e60/\u5f15\u64ce\u5b66\u4e60/build/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-patch.rule"
+		},
+		{
+			"file" : "D:/\u9879\u76ee\u5b66\u4e60/\u5f15\u64ce\u5b66\u4e60/build/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-test.rule"
+		},
+		{
+			"file" : "D:/\u9879\u76ee\u5b66\u4e60/\u5f15\u64ce\u5b66\u4e60/build/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"nlohmann_json-populate"
+		],
+		"name" : "nlohmann_json-populate"
+	}
+}

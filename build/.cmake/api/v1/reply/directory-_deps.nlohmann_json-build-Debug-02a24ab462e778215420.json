@@ -1,0 +1,19 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "_deps/nlohmann_json-build",
+		"source" : "D:/\u9879\u76ee\u5b66\u4e60/\u5f15\u64ce\u5b66\u4e60/build/_deps/nlohmann_json-src"
+	}
+}

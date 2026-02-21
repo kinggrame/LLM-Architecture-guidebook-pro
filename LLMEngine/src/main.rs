@@ -4,7 +4,7 @@
 
 use clap::Parser;
 use llm_engine::{
-    tokenizer::{create_gpt2_tokenizer, create_llama_tokenizer, TokenizeResult, Tokenizer},
+    tokenizer::{create_gpt2_tokenizer, create_llama_tokenizer, Tokenizer},
     InferenceConfig, ModelLoader, ModelType,
 };
 use std::path::PathBuf;
@@ -97,7 +97,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         _ => ModelType::GPT2,
     };
 
-    let mut loader = ModelLoader::new(args.model.to_string_lossy().to_string(), model_type);
+    let loader = ModelLoader::new(args.model.to_string_lossy().to_string(), model_type);
 
     println!("\nLoading model from {}...", args.model.display());
 

@@ -11,7 +11,7 @@
 // - 不同的 head 可以学习不同的注意力模式
 
 use super::{compute_attention_scores, softmax, AttentionConfig};
-use ndarray::{s, Array2, Axis};
+use ndarray::{s, Array2};
 use rand::Rng;
 
 /// 多头注意力层
@@ -104,7 +104,7 @@ impl MultiHeadAttention {
         let mut concatenated = Array2::<f32>::zeros((seq_len, embedding_dim));
         for (h, output) in head_outputs.iter().enumerate() {
             let start = h * head_dim;
-            let end = start + head_dim;
+            let _end = start + head_dim;
             for i in 0..seq_len {
                 for j in 0..head_dim {
                     concatenated[[i, start + j]] = output[[i, j]];

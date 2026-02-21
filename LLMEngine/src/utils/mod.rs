@@ -59,7 +59,7 @@ pub fn gelu(x: &Array2<f32>) -> Array2<f32> {
 /// GELU 近似（更快速）
 pub fn gelu_fast(x: &Array2<f32>) -> Array2<f32> {
     x.mapv(|v| {
-        let sqrt_2pi = (std::f32::consts::PI * 2.0).sqrt();
+        let _sqrt_2pi = (std::f32::consts::PI * 2.0).sqrt();
         0.5 * v * (1.0 + (v * 0.044715).tanh())
     })
 }

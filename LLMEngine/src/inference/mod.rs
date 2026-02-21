@@ -1,10 +1,10 @@
-//! 推理引擎模块
-//!
-//! 包含完整的推理流程：
-//! - 前向传播
-//! - KV Cache 管理
-//! - 采样策略
-//! - 批量处理
+// 推理引擎模块
+//
+// 包含完整的推理流程：
+// - 前向传播
+// - KV Cache 管理
+// - 采样策略
+// - 批量处理
 
 use crate::model::{KVCache, Model, ModelConfig};
 use crate::Result;
@@ -81,7 +81,7 @@ impl<M: Model> InferenceEngine<M> {
     }
 
     /// 前向传播
-    fn forward(&mut self, input_ids: &[usize], position: usize) -> Result<Array2<f32>> {
+    fn forward(&mut self, input_ids: &[usize], _position: usize) -> Result<Array2<f32>> {
         // 更新 position IDs
         let position_ids: Vec<usize> = (0..input_ids.len()).collect();
 

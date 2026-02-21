@@ -7,7 +7,7 @@
 //! - GPT-NeoX
 //! - Falcon
 
-use ndarray::{Array, Array2, Array3, Axis};
+use ndarray::{Array2, Array3};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 

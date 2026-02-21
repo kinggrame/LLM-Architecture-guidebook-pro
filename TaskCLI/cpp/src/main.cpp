@@ -5,13 +5,10 @@
 #include <string>
 #include <vector>
 #include <optional>
-#include <filesystem>
 
 #include "model/task.h"
 #include "model/user.h"
 #include "storage/json_store.h"
-
-namespace fs = std::filesystem;
 
 void print_usage() {
     std::cout << "Usage: taskcli <command> [options]\n";
@@ -59,7 +56,7 @@ int main(int argc, char* argv[]) {
             } else if (subcmd == "list") {
                 auto users = storage->get_users();
                 for (const auto& u : users) {
-                    std::cout << u.id << " - " << u.name << "\n";
+                    std::cout << u->id << " - " << u->name << "\n";
                 }
             } else {
                 std::cerr << "Unknown user command: " << subcmd << "\n";
@@ -72,7 +69,7 @@ int main(int argc, char* argv[]) {
             }
             std::string title = argv[2];
             
-            auto task = std::make_shared<Task>(storage->next_task_id(), title, 1);
+            auto task = std::make_shared<Task>(storage->next_task_id, title, 1);
             storage->add_task(task);
             std::cout << "Task created: #" << task->id << " - " << task->title << "\n";
         } else if (cmd == "list") {

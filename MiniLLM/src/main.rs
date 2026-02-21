@@ -3,6 +3,9 @@
 // 这是一个从零实现的简化版 LLM
 // 包含：Tokenizer, Embedding, Attention, Transformer
 
+// 学习项目：允许未完全使用的脚手架代码（dead_code / unused_imports）
+#![allow(dead_code, unused_imports)]
+
 mod attention;
 mod embedding;
 mod model;

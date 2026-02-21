@@ -1,6 +1,7 @@
 // src/model/task.cpp
 
 #include "model/task.h"
+#include <algorithm>
 
 using namespace std::chrono;
 
@@ -108,4 +109,39 @@ Status Task::status_from_string(const std::string& s) {
     if (s == "done") return Status::Done;
     if (s == "cancelled" || s == "cancel") return Status::Cancelled;
     return Status::Todo;
+}
+
+json Task::to_json() const {
+    json j;
+    j["id"] = id;
+    j["title"] = title;
+    j["priority"] = priority_to_string();
+    j["status"] = status_to_string();
+    j["user_id"] = user_id;
+    j["tags"] = tags;
+    if (description.has_value()) {
+        j["description"] = *description;
+    }
+    j["created_at"] = std::chrono::system_clock::to_time_t(created_at);
+    j["updated_at"] = std::chrono::system_clock::to_time_t(updated_at);
+    return j;
+}
+
+Task Task::from_json(const json& j) {
+    Task task(j["id"].get<uint32_t>(), j["title"].get<std::string>(), j["user_id"].get<uint32_t>());
+    task.priority = priority_from_string(j.value("priority", "medium"));
+    task.status = status_from_string(j.value("status", "todo"));
+    if (j.contains("description") && !j["description"].is_null()) {
+        task.description = j["description"].get<std::string>();
+    }
+    if (j.contains("tags")) {
+        task.tags = j["tags"].get<std::vector<std::string>>();
+    }
+    if (j.contains("created_at")) {
+        task.created_at = std::chrono::system_clock::from_time_t(j["created_at"].get<std::time_t>());
+    }
+    if (j.contains("updated_at")) {
+        task.updated_at = std::chrono::system_clock::from_time_t(j["updated_at"].get<std::time_t>());
+    }
+    return task;
 }

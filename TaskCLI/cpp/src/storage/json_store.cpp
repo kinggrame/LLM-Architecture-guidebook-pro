@@ -3,11 +3,12 @@
 #include "storage/json_store.h"
 #include <fstream>
 #include <algorithm>
+#include <filesystem>
 
 using json = nlohmann::json;
 
 Storage::Storage(const std::string& data_dir) 
-    : data_dir_(data_dir), next_task_id_(1), next_user_id_(1) {
+    : data_dir_(data_dir), next_task_id(1), next_user_id(1) {
     
     std::filesystem::create_directories(data_dir_);
     load();
@@ -32,8 +33,8 @@ void Storage::load() {
                 tasks_.push_back(task);
             }
             
-            next_user_id_ = j.value("next_user_id", 1);
-            next_task_id_ = j.value("next_task_id", 1);
+            next_user_id = j.value("next_user_id", 1);
+            next_task_id = j.value("next_task_id", 1);
         } catch (...) {
             // 如果加载失败，使用默认数据
         }
@@ -41,7 +42,7 @@ void Storage::load() {
     
     if (users_.empty()) {
         users_.push_back(std::make_shared<User>(User(1, "default")));
-        next_user_id_ = 2;
+        next_user_id = 2;
     }
 }
 
@@ -63,8 +64,8 @@ void Storage::save() {
         j["tasks"].push_back(task_json);
     }
     
-    j["next_user_id"] = next_user_id_;
-    j["next_task_id"] = next_task_id_;
+    j["next_user_id"] = next_user_id;
+    j["next_task_id"] = next_task_id;
     
     std::ofstream file(data_dir_ + "/data.json");
     file << j.dump(2);
@@ -75,7 +76,7 @@ std::vector<std::shared_ptr<User>> Storage::get_users() {
 }
 
 std::shared_ptr<User> Storage::add_user(const std::string& name) {
-    auto user = std::make_shared<User>(User(next_user_id_++, name));
+    auto user = std::make_shared<User>(User(next_user_id++, name));
     users_.push_back(user);
     save();
     return user;
@@ -110,7 +111,7 @@ std::shared_ptr<Task> Storage::get_task(uint32_t id) {
 }
 
 std::shared_ptr<Task> Storage::add_task(std::shared_ptr<Task> task) {
-    task->id = next_task_id_++;
+    task->id = next_task_id++;
     tasks_.push_back(task);
     save();
     return task;
